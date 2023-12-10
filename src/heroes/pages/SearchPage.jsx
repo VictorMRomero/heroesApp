@@ -1,6 +1,6 @@
 
 
-export const Search = () => {
+export const SearchPage = () => {
 
 
     return (

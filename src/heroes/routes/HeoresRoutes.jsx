@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom"
 import { Navbar } from "../../ui"
-import { DCPage, Hero, MarvelPage, Search } from "../pages"
+import { DCPage, HeroPage, MarvelPage, SearchPage } from "../pages"
 
  
 
@@ -14,8 +14,8 @@ import { DCPage, Hero, MarvelPage, Search } from "../pages"
                     <Route path="marvel" element={<MarvelPage />}/>
                     <Route path="dc" element={<DCPage />}/>
 
-                    <Route path="search" element={<Search />}/>
-                    <Route path="hero" element={<Hero />}/>
+                    <Route path="search" element={<SearchPage />}/>
+                    <Route path="hero" element={<HeroPage />}/>
 
                     <Route path="/*" element={<Navigate to="/marvel" /> } />
                 </Routes>

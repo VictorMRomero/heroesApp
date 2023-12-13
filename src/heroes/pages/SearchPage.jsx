@@ -15,7 +15,8 @@ export const SearchPage = () => {
 
    
 
-   const showSearch = (heroes.length === 0);
+   const showSearch = (heroes.length === 0 && q.length > 1) ;
+   
 
     const { searchText, onInputChange} = useForm({
         searchText: q
@@ -50,7 +51,7 @@ export const SearchPage = () => {
                         value={ searchText}
                         onChange={ onInputChange}/>
                     </form>
-                    <button className="btn btn-outline-primary mt-2">Search</button>
+                    <button className="btn btn-outline-primary mt-2" onClick={ onSearchSubmit }>Search</button>
                 </div>
 
                 <div className="col-7">
@@ -67,6 +68,8 @@ export const SearchPage = () => {
 
                         <HeroCard 
                             key = {hero.id}
+                            Hawkeye
+                            Alter ego: Clinton Francis Barton
                             {...hero}
                         />
                             
